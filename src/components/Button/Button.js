@@ -38,6 +38,10 @@ const Button = (props) => {
 
 Button.propTypes = {
   text: PropTypes.string,
+  child: PropTypes.oneOfType([
+    PropTypes.element, 
+    PropTypes.elementType
+  ]),
   color: PropTypes.string,
   wide: PropTypes.bool,
   add: PropTypes.bool,
