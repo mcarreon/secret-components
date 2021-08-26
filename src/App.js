@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "./components/Button";
+import Dropdown from "./components/Dropdown";
+
+import "./assets/styles/pages/app.scss";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="buttons">
+        <Button text="New Invoice" add />
+        <Button text="Mark as Paid" />
+        <Button text="Edit" color="light" />
+        <Button text="Edit" color="dark" />
+        <Button text="Save as Draft" color="lightAlt" />
+        <Button text="Save as Draft" color="darkAlt" />
+        <Button text="Delete" color="danger" />
+      </div>
+      <div className="wide-btn-container">
+        <Button text="+ Add New Item" color="light" wide/>
+      </div>
+      <div>
+        <Dropdown label="Net 30 Days"/>
+      </div>
     </div>
   );
 }

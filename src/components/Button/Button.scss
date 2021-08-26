@@ -1,0 +1,112 @@
+@import '../../assets/styles/fonts';
+@import '../../assets/styles/constants';
+
+$addIconSize: 32px;
+
+// Reset the css 
+button {
+  border: none;
+  background-color: transparent;
+}
+
+// Base 
+button {
+  align-items: center;
+  border-radius: 24px;
+  color: $colorFontLight;
+  cursor: pointer;
+  display: flex;
+  font-family: $spartan;
+  font-weight: 700;
+  font-size: 12px;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 1px;
+  padding: 17px 24px;
+  transition-duration: $transitionDuration;
+}
+
+// Add Icon
+.add-icon {
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  color: $colorDefault;
+  display: block;
+  font-size: 20px;
+  height: $addIconSize;
+  line-height: 36px;
+  margin-right: 16px;
+  transition-duration: $transitionDuration;
+  text-align: center; 
+  width: $addIconSize;
+
+  &:hover {
+    background-color: $colorDefaultHover;
+  }
+}
+
+.icon {
+  padding: 8px 15px 8px 8px;
+}
+
+// Default 
+.btn-default {
+  background-color: $colorDefault;
+
+  &:hover {
+    background-color: $colorDefaultHover;
+  }
+}
+
+// Light 
+.btn-light {
+  background-color: $colorLight;
+  color: $colorFontDarkAlt;
+
+  &:hover {
+    background-color: $colorLightHover;
+  }
+}
+
+// Light Alternate
+.btn-light-alt {
+  background-color: $colorLightAlt;
+  color: $colorFontDarkAlt;
+
+  &:hover {
+    background-color: $colorLightAltHover;
+  }
+}
+
+// Dark
+.btn-dark {
+  background-color: $colorDark;
+
+  &:hover {
+    background-color: $colorDarkHover;
+    color: $colorFontExtraLight;
+  }
+}
+
+// Dark Alternate
+.btn-dark-alt {
+  background-color: $colorDarkAlt;
+
+  &:hover {
+    background-color: $colorDarkAltHover;
+  }
+}
+
+// Danger 
+.btn-danger {
+  background-color: $colorDanger;
+
+  &:hover {
+    background-color: $colorDangerHover;
+  }
+}
+
+// Full width btn
+.width-full {
+  width: 100%;
+}

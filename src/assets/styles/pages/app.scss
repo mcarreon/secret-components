@@ -1,0 +1,19 @@
+$spacer: 30px;
+
+body {
+  margin: 0px;
+  padding: $spacer;
+}
+
+.buttons {
+  display: flex;
+
+  button {
+    margin-right: $spacer;
+  }
+}
+
+.wide-btn-container {
+  margin: $spacer 0px;
+  width: 350px;
+}
