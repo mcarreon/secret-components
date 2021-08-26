@@ -5,18 +5,26 @@ import clsx from "clsx";
 import "./Dropdown.scss";
 
 const Dropdown = (props) => {
-  const {className, dark, options, label, labelTitle, labelInline} = props;
+  const { className, options, dark, label = true, labelConfig = {}, ...spreadableProps } = props
+
+  const { labelTitle, labelInline = false, className: labelClassName} = labelConfig
 
   const classes = clsx({
     "dropdown-light": true,
     "dropdown-dark": dark,
-  }, className);
+  }, className)
+
+  const labelClasses = clsx({
+    "labelInline": labelInline
+  }, labelClassName)
+
+  const labelEl = <label className={labelClasses}>{labelTitle}</label>
 
   return (
-    <div>
-      <label>{labelTitle}</label>
-      <select className={classes} {...props}></select>
-    </div>
+    <>
+      {label ? labelEl : <></>}
+      <select className={classes} {...spreadableProps}></select>
+    </>
   );
 };
 
@@ -24,9 +32,11 @@ Dropdown.propTypes = {
   className: PropTypes.string,
   dark: PropTypes.bool,
   options: PropTypes.array,
-  label: PropTypes.string,
-  labelTitle: PropTypes.string,
-  labelInline: PropTypes.bool
+  label: PropTypes.bool,
+  labelConfig: PropTypes.shape({
+    labelTitle: PropTypes.string,
+    labelInline: PropTypes.bool
+  }),
 };
 
 export default Dropdown;

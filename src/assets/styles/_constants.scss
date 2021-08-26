@@ -1,33 +1,42 @@
-/* ***Colors*** */
+/* ***Btn Colors*** */
 // Default
-$colorDefault: #7C5dfa;
-$colorDefaultHover: #9277FF;
+$btnColorDefault: #7C5dfa;
+$btnColorDefaultHover: #9277FF;
 
 // Dark
-$colorDark: #252945;
-$colorDarkHover: #FFFFFF;
-$colorDarkAlt: #373B53;
-$colorDarkAltHover: #1E2139;
+$btnColorDark: #252945;
+$btnColorDarkHover: #FFFFFF;
+$btnColorDarkAlt: #373B53;
+$btnColorDarkAltHover: #1E2139;
 
 // Light
-$colorLight: #FFFFFF;
-$colorLightHover: #DFE3FA;
-$colorLightAlt: #373B53;
-$colorLightAltHover: #0C0E16;
+$btnColorLight: #FFFFFF;
+$btnColorLightHover: #DFE3FA;
+$btnColorLightAlt: #373B53;
+$btnColorLightAltHover: #0C0E16;
 
 // Danger
-$colorDanger: #EC5757;
-$colorDangerHover: #FF9797;
+$btnColorDanger: #EC5757;
+$btnColorDangerHover: #FF9797;
+
+/* ***Dropdown Colors*** */
+// Light
+$dropLight: #DFE3FA;
+$dropLightHover: #7C5DFA;
+
+// Dark
+$dropDark: #252945;
+$dropBGDark: #1E2139;
 
 /* ***Font Colors*** */
 // Light
-$colorFontLight: #FFFFFF;
-$colorFontLightAlt: #888EB0;
-$colorFontExtraLight: #DFE3FA;
+$fontColorLight: #FFFFFF;
+$fontColorLightAlt: #888EB0;
+$fontColorExtraLight: #DFE3FA;
 
 // Dark
-$colorFontDark: #000000;
-$colorFontDarkAlt: #7E88C3;
+$fontColorDark: #000000;
+$fontColorDarkAlt: #7E88C3;
 
 /* ***Transitions*** */
 $transitionDuration: .3s;

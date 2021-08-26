@@ -4,6 +4,10 @@ import Dropdown from "./components/Dropdown";
 import "./assets/styles/pages/app.scss";
 
 function App() {
+  const labelConfig = {
+    labelTitle: "Payment Terms"
+  }
+
   return (
     <div className="App">
       <div className="buttons">
@@ -19,7 +23,7 @@ function App() {
         <Button text="+ Add New Item" color="light" wide/>
       </div>
       <div>
-        <Dropdown label="Net 30 Days"/>
+        <Dropdown labelConfig={labelConfig} />
       </div>
     </div>
   );

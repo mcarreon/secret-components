@@ -2,6 +2,7 @@
 @import '../../assets/styles/constants';
 
 $addIconSize: 32px;
+$btnMinHeight: 48px;
 
 // Reset the css 
 button {
@@ -13,7 +14,7 @@ button {
 button {
   align-items: center;
   border-radius: 24px;
-  color: $colorFontLight;
+  color: $fontColorLight;
   cursor: pointer;
   display: flex;
   font-family: $spartan;
@@ -22,6 +23,7 @@ button {
   flex-direction: row;
   justify-content: center;
   line-height: 1px;
+  min-height: $btnMinHeight;
   padding: 17px 24px;
   transition-duration: $transitionDuration;
 }
@@ -30,7 +32,7 @@ button {
 .add-icon {
   background-color: #FFFFFF;
   border-radius: 50%;
-  color: $colorDefault;
+  color: $btnColorDefault;
   display: block;
   font-size: 20px;
   height: $addIconSize;
@@ -41,7 +43,7 @@ button {
   width: $addIconSize;
 
   &:hover {
-    background-color: $colorDefaultHover;
+    background-color: $btnColorDefaultHover;
   }
 }
 
@@ -51,58 +53,58 @@ button {
 
 // Default 
 .btn-default {
-  background-color: $colorDefault;
+  background-color: $btnColorDefault;
 
   &:hover {
-    background-color: $colorDefaultHover;
+    background-color: $btnColorDefaultHover;
   }
 }
 
 // Light 
 .btn-light {
-  background-color: $colorLight;
-  color: $colorFontDarkAlt;
+  background-color: $btnColorLight;
+  color: $fontColorDarkAlt;
 
   &:hover {
-    background-color: $colorLightHover;
+    background-color: $btnColorLightHover;
   }
 }
 
 // Light Alternate
 .btn-light-alt {
-  background-color: $colorLightAlt;
-  color: $colorFontDarkAlt;
+  background-color: $btnColorLightAlt;
+  color: $fontColorDarkAlt;
 
   &:hover {
-    background-color: $colorLightAltHover;
+    background-color: $btnColorLightAltHover;
   }
 }
 
 // Dark
 .btn-dark {
-  background-color: $colorDark;
+  background-color: $btnColorDark;
 
   &:hover {
-    background-color: $colorDarkHover;
-    color: $colorFontExtraLight;
+    background-color: $btnColorDarkHover;
+    color: $fontColorExtraLight;
   }
 }
 
 // Dark Alternate
 .btn-dark-alt {
-  background-color: $colorDarkAlt;
+  background-color: $btnColorDarkAlt;
 
   &:hover {
-    background-color: $colorDarkAltHover;
+    background-color: $btnColorDarkAltHover;
   }
 }
 
 // Danger 
 .btn-danger {
-  background-color: $colorDanger;
+  background-color: $btnColorDanger;
 
   &:hover {
-    background-color: $colorDangerHover;
+    background-color: $btnColorDangerHover;
   }
 }
 

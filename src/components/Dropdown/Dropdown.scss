@@ -1,0 +1,19 @@
+@import '../../assets/styles/fonts';
+@import '../../assets/styles/constants';
+
+$ddBoxHeight: 48px;
+$ddBoxMinWidth: 240px;
+
+label {
+  display: block;
+  color: $fontColorDarkAlt;
+  font-family: $spartan;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+select {
+  height: $ddBoxHeight;
+  min-width: $ddBoxMinWidth;
+  padding: 16px 16px 16px 20px;
+}

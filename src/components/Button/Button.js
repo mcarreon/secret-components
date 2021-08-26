@@ -6,7 +6,7 @@ import "./Button.scss";
 
 const Button = (props) => {
 
-  const { text, child, color, wide, add, className, onClick} = props;
+  const { text, child, color, wide, add, className, onClick, ...spreadableProps} = props;
 
   const classes = clsx(
     {
@@ -28,7 +28,7 @@ const Button = (props) => {
     <button
       className={classes}
       onClick={onClick}
-      {...props}
+      {...spreadableProps}
     >
       {add ? addIcon : <></>}
       {child == null ? text : child}
