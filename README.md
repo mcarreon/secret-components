@@ -55,7 +55,7 @@ Dropdown accepts the following props:
 
   // this field is required if customOptions are supplied and controls the value and text of the select
   // the variable supplied to this field should be linked to change based on which customOption is clicked 
-  customValue: (int) or (string) 
+  customValue: (int) or (string),
 
   // defaults to true, disable or enable label
   label: (bool),
@@ -72,10 +72,10 @@ Dropdown accepts the following props:
   },
 
   // required: the initial value/text for the dropdown
-  initialValue: (int) or (string)
+  initialValue: (int) or (string),
   
   // any additional classes you would like to add
-  className: (string)
+  className: (string),
 
   // any html select attricutes can be passed ass props to the select
 }
