@@ -85,4 +85,4 @@ Dropdown accepts the following props:
 
 I would like to go back and add more options to the dropdown to add props/classes to the listbox component, as well as create the inline functionality for the label.
 
-I would also like to test out the custom value/options set in Dropdown a bit more, as the implementation I used was added last second. 
+I would also like to test out the custom value/options set in Dropdown a bit more, as the implementation I used was added last second.
