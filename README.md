@@ -87,4 +87,4 @@ I would like to go back and add more options to the dropdown to add props/classe
 
 I would also like to test out the custom value/options set in Dropdown a bit more, as the implementation I used was added last second.
 
-Currently traveling, but I also realized I had not made the Dropdown listbox absolutely positioned. The Dropdown listbox is spatially positioned correctly but the scss needs to be changed to absolute positioning and the positional properties to match its current blocked position. 
+Currently traveling, but I also realized I had not made the Dropdown listbox absolutely positioned. The Dropdown listbox is spatially positioned correctly but the scss needs to be changed to absolute positioning to take it out of the document flow and the positional properties to match its current blocked position. 
