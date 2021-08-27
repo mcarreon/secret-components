@@ -13,6 +13,7 @@ const Dropdown = (props) => {
     label = true,
     labelConfig = {},
     initialValue,
+    customValue: value,
     ...spreadableProps
   } = props;
 
@@ -80,6 +81,9 @@ const Dropdown = (props) => {
     optionRef.current.value = e.target.value;
   };
 
+  
+  const selectValue = value != null ? value : initialValue;
+
   return (
     <div className="dropdown-container">
       {label ? <Label labelConfig={labelConfig} /> : <></>}
@@ -89,7 +93,7 @@ const Dropdown = (props) => {
           ref={selectRef}
           {...spreadableProps}
         >
-          <option value={initialValue} ref={optionRef}>{initialValue}</option>
+          <option value={selectValue} ref={optionRef}>{selectValue}</option>
         </select>
         <div className={helperClasses} onClick={() => toggleListbox()} ref={eventRef}/>
         <Listbox

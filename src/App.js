@@ -1,9 +1,14 @@
+import { useState } from 'react';
+
 import Button from "./components/Button";
 import Dropdown from "./components/Dropdown";
 
 import "./assets/styles/pages/app.scss";
 
 function App() {
+
+  const [value, setValue] = useState("Net 6 Days");
+  
   const labelConfig = {
     labelTitle: "Payment Terms",
     labelInline: true
@@ -15,11 +20,15 @@ function App() {
 
   const testMap = altTestOptions.map((option, key) => {
     return (
-      <option value={key} key={key}>
+      <option value={option} key={key} onClick={(e) => handleValue(e)}>
         {option}
       </option>
     );
   });
+
+  const handleValue = (e) => {
+    setValue(e.target.value)
+  }
 
   return (
     <div className="App">
@@ -45,6 +54,8 @@ function App() {
         />
         <Dropdown
           options={testOptions}
+          customOptions={testMap}
+          customValue={value}
           labelConfig={labelConfig}
           initialValue="Net 1 Day"
           dark
