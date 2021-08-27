@@ -12,7 +12,6 @@ const Dropdown = (props) => {
     dark = false,
     label = true,
     labelConfig = {},
-    initialSelection,
     initialValue,
     ...spreadableProps
   } = props;
