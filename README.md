@@ -81,8 +81,10 @@ Dropdown accepts the following props:
 }
 ```
 
-## Improvements
+## Improvementsp
 
 I would like to go back and add more options to the dropdown to add props/classes to the listbox component, as well as create the inline functionality for the label.
 
 I would also like to test out the custom value/options set in Dropdown a bit more, as the implementation I used was added last second.
+
+Currently traveling, but I also realized I had not made the Dropdown listbox absolutely positioned. The Dropdown listbox is spatially positioned correctly but the scss needs to be changed to absolute positioning and the positional properties to match its current blocked position. 
