@@ -164,6 +164,7 @@ Dropdown.propTypes = {
     PropTypes.elementType,
     PropTypes.array,
   ]),
+  customValue:PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   label: PropTypes.bool,
   labelConfig: PropTypes.shape({
     labelTitle: PropTypes.string,

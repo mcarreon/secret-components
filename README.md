@@ -53,6 +53,10 @@ Dropdown accepts the following props:
   // this also disables value functionality for the dropdown, and moves value tracking to the parent element
   customOptions: (element) or (array),
 
+  // this field is required if customOptions are supplied and controls the value and text of the select
+  // the variable supplied to this field should be linked to change based on which customOption is clicked 
+  customValue: (int) or (string) 
+
   // defaults to true, disable or enable label
   label: (bool),
 
@@ -80,3 +84,5 @@ Dropdown accepts the following props:
 ## Improvements
 
 I would like to go back and add more options to the dropdown to add props/classes to the listbox component, as well as create the inline functionality for the label.
+
+I would also like to test out the custom value/options set in Dropdown a bit more, as the implementation I used was added last second. 
