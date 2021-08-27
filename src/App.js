@@ -6,23 +6,20 @@ import "./assets/styles/pages/app.scss";
 function App() {
   const labelConfig = {
     labelTitle: "Payment Terms",
-  }
+    labelInline: true
+  };
 
-  const testOptions = [
-    "Net 1 Day", 
-    "Net 7 Days", 
-    "Net 14 Days", 
-    "Net 30 Days"
-  ]
+  const testOptions = ["Net 1 Day", "Net 7 Days", "Net 14 Days", "Net 30 Days"];
 
-  const altTestOptions = [
-    "Net 3 Days", 
-    "Net 6 Days",
-  ]
+  const altTestOptions = ["Net 3 Days", "Net 6 Days"];
 
   const testMap = altTestOptions.map((option, key) => {
-    return <option value={key} key={key}>{option}</option>
-  })
+    return (
+      <option value={key} key={key}>
+        {option}
+      </option>
+    );
+  });
 
   return (
     <div className="App">
@@ -34,18 +31,31 @@ function App() {
         <Button text="Save as Draft" color="lightAlt" />
         <Button text="Save as Draft" color="darkAlt" />
         <Button text="Delete" color="danger" />
-        <Button text="Delete" color="danger" child={<TestComponent />}/>
+        <Button text="Delete" color="danger" child={<TestComponent />} />
       </div>
       <div className="wide-btn-container">
-        <Button text="+ Add New Item" color="light" wide/>
+        <Button text="+ Add New Item" color="light" wide />
       </div>
-      <div>
-        <Dropdown options={testOptions} customOptions={testMap} labelConfig={labelConfig} />
+      <div className="buttons">
+        <Dropdown
+          options={testOptions}
+          labelConfig={labelConfig}
+          initialValue="Net 1 Day"
+          id="light"
+        />
+        <Dropdown
+          options={testOptions}
+          labelConfig={labelConfig}
+          initialValue="Net 1 Day"
+          dark
+        />
       </div>
     </div>
   );
 }
 
-const TestComponent = () => { return <a target="__blank" href="https://google.com">Google</a>}
+const TestComponent = () => {
+  return <p style={{ margin: "0px" }}>Custom Button Child</p>;
+};
 
 export default App;

@@ -3,8 +3,16 @@
 
 $ddBoxHeight: 48px;
 $ddBoxMinWidth: 240px;
+$arrowColor: $dropLightHover;
+$listboxBorderLight: $dropLight;
+$listboxBorderDark: $dropBGDark;
 
-label {
+div.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+label.dropdown {
   display: block;
   color: $fontColorDarkAlt;
   font-family: $spartan;
@@ -12,8 +20,133 @@ label {
   margin-bottom: 10px;
 }
 
-select {
+.dropdown select {
+  appearance: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: $spartan;
+  font-size: 12px;
   height: $ddBoxHeight;
-  min-width: $ddBoxMinWidth;
+  width: $ddBoxMinWidth;
+  outline: none;
+  opacity: 1;
   padding: 8px 16px 8px 20px;
+  pointer-events: auto;
+  transition-duration: $transitionDuration;
+
+  &.dropdown-dark {
+    background-color: $dropBGDark;
+    color: $dropTextDark;
+  }
 }
+
+// helper event catcher element
+.dropdown .event-catcher {
+  bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: $ddBoxHeight;
+  width: $ddBoxMinWidth;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition-duration: $transitionDuration;
+
+  &.dropdown-light {
+    border-color: $dropLight;
+  
+    &:hover, &:active, &:focus, &.active {
+      border-color: $dropLightHover;
+    }
+
+    &.active {
+      border-color: $dropLightHover;
+    }
+  }
+
+  &.dropdown-dark {
+    border-color: $dropDark;
+
+    &:hover, &.active {
+      border-color: $listboxBorderDark;
+    }
+  }
+}
+
+// custom select arrow
+div.dropdown::after {
+  content: '';
+  pointer-events: none;
+  border: solid $arrowColor;
+  border-width: 0 3px 3px 0;
+  position: absolute;
+  height: 1px;
+  padding: 2px;
+  right: 16px;
+  transform: rotate(45deg);
+  top: ($ddBoxHeight / 2) - 5px;
+  width: 1px;
+}
+
+
+// listbox element
+div.listbox {
+  border-radius: 8px;
+  box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+  display: none;
+  margin-top: 24px;
+  width: $ddBoxMinWidth;
+
+  &.active {
+    display: block;
+  }
+
+  option {
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: $spartan;
+    font-size: 12px;
+    font-weight: 700;
+    height: $ddBoxHeight;
+    line-height: $ddBoxHeight;
+    padding: 0px 16px;
+    transition: $transitionDuration;
+    
+    &:last-of-type {
+      border-bottom: none!important;
+    }
+    
+    &:hover {
+      color: $dropTextLightHover;
+    }
+  }
+  
+  // Light
+  &.listbox-light {
+    color: $dropTextLight;
+    
+    option {
+      border-bottom: 1px solid $listboxBorderLight;
+    }
+  }
+
+  // Dark
+  &.listbox-dark {
+    background-color: $dropDark;
+    color: $dropTextDark;
+    
+    option {
+      border-bottom: 1px solid $listboxBorderDark;
+    }
+  }
+}
+
+
+
+
+

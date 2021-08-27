@@ -5,13 +5,13 @@ $addIconSize: 32px;
 $btnMinHeight: 48px;
 
 // Reset the css 
-button {
+button.btn-default {
   border: none;
   background-color: transparent;
 }
 
 // Base 
-button {
+button.btn-default {
   align-items: center;
   border-radius: 24px;
   color: $fontColorLight;
@@ -26,90 +26,90 @@ button {
   min-height: $btnMinHeight;
   padding: 17px 24px;
   transition-duration: $transitionDuration;
-}
 
-// Add Icon
-.add-icon {
-  background-color: #FFFFFF;
-  border-radius: 50%;
-  color: $btnColorDefault;
-  display: block;
-  font-size: 20px;
-  height: $addIconSize;
-  line-height: 36px;
-  margin-right: 16px;
-  transition-duration: $transitionDuration;
-  text-align: center; 
-  width: $addIconSize;
+  // Add Icon
+  .add-icon {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    color: $btnColorDefault;
+    display: block;
+    font-size: 20px;
+    height: $addIconSize;
+    line-height: 36px;
+    margin-right: 16px;
+    transition-duration: $transitionDuration;
+    text-align: center; 
+    width: $addIconSize;
 
-  &:hover {
-    background-color: $btnColorDefaultHover;
+    &:hover {
+      background-color: $btnColorDefaultHover;
+    }
   }
-}
 
-// Modifies button when icon exists
-.icon {
-  padding: 8px 15px 8px 8px;
-}
-
-// Default 
-.btn-default {
-  background-color: $btnColorDefault;
-
-  &:hover {
-    background-color: $btnColorDefaultHover;
+  // Modifies button when icon exists
+  &.icon {
+    padding: 8px 15px 8px 8px;
   }
-}
 
-// Light 
-.btn-light {
-  background-color: $btnColorLight;
-  color: $fontColorDarkAlt;
-
-  &:hover {
-    background-color: $btnColorLightHover;
+  // Full width btn
+  &.width-full {
+    width: 100%;
   }
-}
 
-// Light Alternate
-.btn-light-alt {
-  background-color: $btnColorLightAlt;
-  color: $fontColorDarkAlt;
+  // Default 
+  &.btn-default {
+    background-color: $btnColorDefault;
 
-  &:hover {
-    background-color: $btnColorLightAltHover;
+    &:hover {
+      background-color: $btnColorDefaultHover;
+    }
   }
-}
 
-// Dark
-.btn-dark {
-  background-color: $btnColorDark;
+  // Light 
+  &.btn-light {
+    background-color: $btnColorLight;
+    color: $fontColorDarkAlt;
 
-  &:hover {
-    background-color: $btnColorDarkHover;
-    color: $fontColorExtraLight;
+    &:hover {
+      background-color: $btnColorLightHover;
+    }
   }
-}
 
-// Dark Alternate
-.btn-dark-alt {
-  background-color: $btnColorDarkAlt;
+  // Light Alternate
+  &.btn-light-alt {
+    background-color: $btnColorLightAlt;
+    color: $fontColorDarkAlt;
 
-  &:hover {
-    background-color: $btnColorDarkAltHover;
+    &:hover {
+      background-color: $btnColorLightAltHover;
+    }
   }
-}
 
-// Danger 
-.btn-danger {
-  background-color: $btnColorDanger;
+  // Dark
+  &.btn-dark {
+    background-color: $btnColorDark;
 
-  &:hover {
-    background-color: $btnColorDangerHover;
+    &:hover {
+      background-color: $btnColorDarkHover;
+      color: $fontColorExtraLight;
+    }
   }
-}
 
-// Full width btn
-.width-full {
-  width: 100%;
+  // Dark Alternate
+  &.btn-dark-alt {
+    background-color: $btnColorDarkAlt;
+
+    &:hover {
+      background-color: $btnColorDarkAltHover;
+    }
+  }
+
+  // Danger 
+  &.btn-danger {
+    background-color: $btnColorDanger;
+
+    &:hover {
+      background-color: $btnColorDangerHover;
+    }
+  }
 }

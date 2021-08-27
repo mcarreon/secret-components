@@ -7,9 +7,11 @@ body {
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
 
-  button {
+  button, .dropdown-container {
     margin-right: $spacer;
+    margin-bottom: $spacer;
   }
 }
 

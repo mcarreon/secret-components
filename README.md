@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Write-Up
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Most color values (and a couple other values) are saved as constants under assets/styles/_constants so theming can be quickly changed. I did not use typescript for the sake of time as I am not as familiar with writing typescript. However, I did use React's built in propTypes for type-checking.
 
-## Available Scripts
+To style the dropdown, I used an overlayed div to catch all the events and handle focus state on the actual select as well as event listeners to deal with clicking inside and outside of the element.
 
-In the project directory, you can run:
+## Button
 
-### `yarn start`
+Button accepts the following props:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```javascript
+{
+  // inner text
+  text: (string),
+  
+  // custom inner element
+  child: (element),
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  // can be left empty to use (button 2) or 
+  // select between light (button 3), dark (button 3), lightAlt (button 4), darkAlt (button 4), danger (button 5)
+  color: (string), 
 
-### `yarn test`
+  // set true to allow for full width button (assuming it takes 100% width)
+  wide: (bool),
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  // set true to show for the add icon
+  add: (book),
 
-### `yarn build`
+  // extra classes you want to add to the button
+  className: (string),
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  // functionality handler
+  onClick: (func)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  // any html button attributes can be passed as props to the button
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Dropdown
 
-### `yarn eject`
+Dropdown accepts the following props:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```javascript
+{
+  // set to true to enable dark mode
+  dark: (bool),
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  // list of values to use as option value and text
+  options: (array),
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  // can insert your own options element, or mapped array of elements
+  // this will override the options array
+  // this also disables value functionality for the dropdown, and moves value tracking to the parent element
+  customOptions: (element) or (array),
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  // defaults to true, disable or enable label
+  label: (bool),
 
-## Learn More
+  // config object for the label
+  labelConfig: {
+    // label text
+    labelTitle: (string),
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    // not implmented yet, but would turn the label inline
+    labelInline: (bool),
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    // any html label attricutes can be passed ass props to the select
+  },
 
-### Code Splitting
+  // required: the initial value/text for the dropdown
+  initialValue: (int) or (string)
+  
+  // any additional classes you would like to add
+  className: (string)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  // any html select attricutes can be passed ass props to the select
+}
+```
 
-### Analyzing the Bundle Size
+## Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I would like to go back and add more options to the dropdown to add props/classes to the listbox component, as well as create the inline functionality for the label.
